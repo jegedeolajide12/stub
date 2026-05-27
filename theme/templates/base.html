@@ -1,0 +1,102 @@
+{% load tailwind_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>{% block title %}Bible Study Platform{% endblock %}</title>
+    
+    <!-- Tailwind CSS + DaisyUI (via django-tailwind) -->
+    {% tailwind_css %}
+    
+    <!-- HTMX -->
+    <script src="https://unpkg.com/htmx.org@2.0.0"></script>
+    <!-- Optional: add hx-boost for smooth page transitions -->
+    <meta name="htmx-config" content='{"defaultSwapStyle":"innerHTML"}'>
+    
+    <!-- Extra custom CSS (if any) -->
+    {% block extra_css %}{% endblock %}
+</head>
+<body class="bg-base-200 font-sans antialiased" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
+
+    <!-- Navbar -->
+    <div class="navbar bg-base-100 shadow-md sticky top-0 z-50">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Read</a></li>
+                    <li><a href="#">AI Tutor</a></li>
+                    <li><a href="#">My Insights</a></li>
+                    <li><a href="#">Quests</a></li>
+                </ul>
+            </div>
+            <a href="#" class="btn btn-ghost text-xl font-serif">
+                📖 BibleAI
+            </a>
+        </div>
+        
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Read</a></li>
+                <li><a href="#">AI Tutor</a></li>
+                <li><a href="#">Insights</a></li>
+                <li><a href="#">Quests</a></li>
+            </ul>
+        </div>
+        
+        <div class="navbar-end">
+            {% if user.is_authenticated %}
+                <div class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar placeholder">
+                        <div class="bg-primary text-primary-content rounded-full w-10">
+                            <span class="text-sm">{{ user.username|make_list|first|upper }}</span>
+                        </div>
+                    </div>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="{% url 'account_logout' %}">Logout</a></li>
+                    </ul>
+                </div>
+            {% else %}
+                <a href="{% url 'account_login' %}" class="btn btn-primary btn-sm">Sign In</a>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <main class="min-h-screen">
+        {% block content %}
+        <!-- Page-specific content goes here -->
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer footer-center p-4 bg-base-300 text-base-content mt-16">
+        <aside>
+            <p>© {% now "Y" %} BibleAI – Let Scripture come alive with AI</p>
+        </aside>
+    </footer>
+
+    <!-- HTMX event listeners (optional) -->
+    <script>
+        document.body.addEventListener('htmx:afterSwap', function(evt) {
+            // Re-initialize any DaisyUI components (like tooltips) after HTMX loads new content
+            if (window.initDaisyUI) window.initDaisyUI();
+        });
+        // Simple DaisyUI tooltip re-init (if needed)
+        window.initDaisyUI = function() {
+            // For tooltips you might need to re-run any JS initializers
+            // DaisyUI uses CSS mostly, but some components (dropdowns) need proper attr
+        };
+    </script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

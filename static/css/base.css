@@ -1,0 +1,107 @@
+/* ========================================
+   GLOBAL STYLES
+   ======================================== */
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-serif-script {
+  font-family: 'Poppins', serif;
+}
+
+/* ========================================
+   GLASS MORPHISM EFFECTS
+   ======================================== */
+.glass-nav, .glass-sidebar, .glass-card {
+  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.7);
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.dark .glass-nav, .dark .glass-sidebar, .dark .glass-card {
+  background: rgba(15, 25, 45, 0.7);
+  border-color: rgba(255,255,255,0.08);
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+.streak-flame {
+  animation: flicker 1.5s infinite;
+}
+
+@keyframes flicker {
+  0% { opacity: 1; text-shadow: 0 0 2px #f97316; }
+  50% { opacity: 0.9; text-shadow: 0 0 10px #f97316, 0 0 5px #f59e0b; }
+  100% { opacity: 1; text-shadow: 0 0 2px #f97316; }
+}
+
+.hover-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -12px rgba(0,0,0,0.15);
+}
+
+/* ========================================
+   LAYOUT UTILITIES
+   ======================================== */
+.progress-ring {
+  transform: rotate(-90deg);
+}
+
+.sidebar-collapsed .sidebar-text {
+  display: none;
+}
+
+.sidebar-collapsed .sidebar-icon-only {
+  justify-content: center;
+}
+
+.sidebar-collapsed .nav-item {
+  justify-content: center;
+  padding: 0.75rem 0;
+}
+
+.transition-sidebar {
+  transition: width 0.2s ease;
+}
+
+/* ========================================
+   SCROLLBAR STYLING
+   ======================================== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 10px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+/* ========================================
+   HIDE SCROLLBAR UTILITY
+   ======================================== */
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
+}
