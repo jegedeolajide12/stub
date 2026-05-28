@@ -10,7 +10,7 @@
   <div class="mb-8 rounded-2xl bg-gradient-to-r from-indigo-600/10 via-purple-600/10 to-amber-500/10 dark:from-indigo-900/30 dark:via-purple-900/30 dark:to-amber-900/30 backdrop-blur-sm p-6 md:p-8 border border-white/20">
     <div class="grid md:grid-cols-2 gap-6 items-center">
       <div>
-        <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2">Grow Deeper in God's Word</h1>
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2">Welcome back, {{ user.first_name|default:user.username }} 👋</h1>
         <p class="text-indigo-600 dark:text-indigo-300 font-medium mb-1">You've completed 73% of Proverbs. 🔥</p>
         <p class="text-gray-600 dark:text-gray-400 mb-6">Your consistency is improving — last week +18%.</p>
         <div class="flex flex-wrap gap-3">

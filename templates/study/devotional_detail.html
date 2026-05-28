@@ -1,0 +1,188 @@
+{% extends "_base.html" %}
+{% load static %}
+
+{% block title %}Walking in Faith - BibleAI Devotionals{% endblock %}
+
+{% block content %}
+<div class="w-full px-4 sm:px-6 lg:px-8 mx-auto max-w-4xl py-8">
+  
+  <!-- ========== NAVIGATION BREADCRUMB ========== -->
+  <nav class="mb-6 flex items-center gap-2 text-sm">
+    <a href="#" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 flex items-center gap-1">
+      <i class="fas fa-arrow-left text-xs"></i> All Devotionals
+    </a>
+    <span class="text-gray-400 dark:text-gray-600">/</span>
+    <span class="text-gray-600 dark:text-gray-400">May 27, 2026</span>
+  </nav>
+
+  <!-- ========== MAIN ARTICLE ========== -->
+  <article class="bg-white dark:bg-gray-800/60 rounded-3xl shadow-lg border border-gray-100 dark:border-gray-700 overflow-hidden">
+    
+    <!-- Header Section -->
+    <div class="bg-gradient-to-b from-indigo-50 to-purple-50 dark:from-indigo-950/50 dark:to-purple-950/50 px-6 md:px-10 py-10 md:py-12 border-b border-gray-100 dark:border-gray-700">
+      <!-- Meta Info -->
+      <div class="flex flex-wrap items-center gap-3 mb-4">
+        <!-- Date -->
+        <div class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+          <i class="fas fa-calendar text-indigo-500"></i>
+          <span>May 27, 2026</span>
+        </div>
+        
+        <!-- Views -->
+        <div class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+          <i class="fas fa-eye text-indigo-500"></i>
+          <span>342 views</span>
+        </div>
+
+        <!-- Theme Badge -->
+        <span class="inline-block text-xs font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-100/50 dark:bg-indigo-900/50 px-3 py-1 rounded-full">Trust</span>
+      </div>
+
+      <!-- Title -->
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-3 leading-tight">Walking in Faith</h1>
+
+      <!-- Author -->
+      <p class="text-lg text-gray-600 dark:text-gray-400">
+        <span class="font-semibold text-gray-900 dark:text-white">— Pastor Sarah Williams</span>
+      </p>
+    </div>
+
+    <!-- Content Section -->
+    <div class="px-6 md:px-10 py-10 md:py-12">
+      
+      <!-- Key Verse Highlight -->
+      <div class="mb-8 p-6 bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-950/30 dark:to-purple-950/30 rounded-2xl border-l-4 border-indigo-500 backdrop-blur-sm">
+        <p class="text-sm uppercase font-bold text-indigo-600 dark:text-indigo-400 mb-3 tracking-wider">Key Verse</p>
+        <p class="text-2xl md:text-3xl italic font-serif text-gray-900 dark:text-white leading-relaxed mb-3">"Trust in the Lord with all your heart and lean not on your own understanding."</p>
+        <p class="text-lg font-semibold text-indigo-600 dark:text-indigo-400">Proverbs 3:5</p>
+      </div>
+
+      <!-- Main Content -->
+      <div class="prose dark:prose-invert max-w-none mb-8">
+        <div class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed space-y-4">
+          <p>Faith is not the absence of doubt, but the choice to trust God despite our circumstances. In our daily lives, we face countless situations that challenge our confidence in divine providence. Whether it's financial uncertainties, health concerns, relationship struggles, or career decisions, our natural instinct is to rely on our own understanding and control.</p>
+          
+          <p>However, the proverb we're reflecting on today calls us to something radically different. "Trust in the Lord with all your heart" doesn't mean superficial belief or occasional prayer. It means a deep, foundational surrender of our will to God's wisdom. It means acknowledging that the infinite God of the universe sees what we cannot see, knows what we do not know, and loves us infinitely.</p>
+          
+          <p>"Lean not on your own understanding" is the second part of this powerful truth. Our understanding is limited. We see only the present moment and our immediate circumstances. We cannot see how today's struggle will contribute to tomorrow's strength, or how apparent setbacks are actually divine redirections.</p>
+          
+          <p>When we trust God completely, we experience a peace that transcends understanding. This peace doesn't come from having all the answers or a clear path forward. It comes from knowing that we don't have to figure everything out on our own. It comes from the assurance that God is faithful, that He works all things together for good for those who love Him.</p>
+          
+          <p>As you reflect on this devotional today, consider one area in your life where you've been relying too heavily on your own understanding. Is it worry about the future? Anxiety about control? Fear of the unknown? Whatever it is, this is your invitation to release it into God's capable hands and experience the freedom that comes from true faith.</p>
+        </div>
+      </div>
+
+      <!-- Reflection Prompt -->
+      <div class="mb-8 bg-amber-50 dark:bg-amber-950/30 rounded-2xl p-6 border border-amber-200 dark:border-amber-800/50">
+        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+          <i class="fas fa-pen-fancy text-amber-500"></i> Reflect
+        </h3>
+        <p class="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">Where have you been leaning on your own understanding instead of trusting God? What specific situation or decision do you need to surrender to Him? Write down one thing you're worried about controlling, and commit to releasing it to God's care this week.</p>
+        
+        <!-- Reflection Text Area -->
+        <form method="post" class="space-y-3">
+          {% csrf_token %}
+          <textarea name="reflection_note" 
+                    placeholder="Write your personal reflection here..."
+                    class="w-full px-4 py-3 rounded-xl bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-amber-200 dark:border-amber-800/50 focus:border-amber-500 dark:focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 resize-none"
+                    rows="4">I need to trust God more with my finances and stop worrying about every expense. He has always provided for me, and I need to release this anxiety completely.</textarea>
+          <button type="submit" class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg font-semibold transition flex items-center gap-2">
+            <i class="fas fa-save"></i> Save Reflection
+          </button>
+        </form>
+      </div>
+
+      <!-- Prayer Request -->
+      <div class="mb-8 bg-rose-50 dark:bg-rose-950/30 rounded-2xl p-6 border border-rose-200 dark:border-rose-800/50">
+        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+          <i class="fas fa-hands-praying text-rose-500"></i> Prayer Request
+        </h3>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed italic">"Lord, I surrender my need to control everything to You. Grant me the faith to trust in Your perfect plan. Help me release my fears and anxieties, knowing that You are with me in every situation. Strengthen my faith daily, and remind me that Your ways are higher than my ways. Amen."</p>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="bg-gray-50 dark:bg-gray-900/50 rounded-2xl p-6 flex flex-wrap gap-3 justify-between items-center">
+        <div class="flex items-center gap-3">
+          <span class="inline-flex items-center gap-2 text-green-600 dark:text-green-400 font-semibold">
+            <i class="fas fa-check-circle text-lg"></i> Completed
+          </span>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button class="p-2 rounded-lg bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 transition border border-gray-200 dark:border-gray-700">
+            <i class="fas fa-heart text-lg text-gray-400 hover:text-red-500"></i>
+          </button>
+          <button class="p-2 rounded-lg bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 transition border border-gray-200 dark:border-gray-700">
+            <i class="fas fa-share-alt text-lg"></i>
+          </button>
+          <button class="p-2 rounded-lg bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 transition border border-gray-200 dark:border-gray-700">
+            <i class="fas fa-bookmark text-lg"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Section -->
+    <div class="bg-gray-50 dark:bg-gray-900/50 px-6 md:px-10 py-8 border-t border-gray-100 dark:border-gray-700">
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Previous Devotional -->
+        <a href="#" class="group p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-indigo-500 dark:hover:border-indigo-600 hover:shadow-md transition">
+          <p class="text-xs uppercase font-bold text-gray-600 dark:text-gray-400 mb-2 flex items-center gap-2">
+            <i class="fas fa-arrow-left"></i> Previous
+          </p>
+          <h4 class="font-semibold text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition line-clamp-2">The Peace That Surpasses Understanding</h4>
+          <p class="text-xs text-gray-600 dark:text-gray-400 mt-2">May 25, 2026</p>
+        </a>
+
+        <!-- Next Devotional -->
+        <a href="#" class="group p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-indigo-500 dark:hover:border-indigo-600 hover:shadow-md transition text-right md:text-left">
+          <p class="text-xs uppercase font-bold text-gray-600 dark:text-gray-400 mb-2 flex items-center justify-end md:justify-start gap-2">
+            Next <i class="fas fa-arrow-right"></i>
+          </p>
+          <h4 class="font-semibold text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition line-clamp-2">Love Without Limits</h4>
+          <p class="text-xs text-gray-600 dark:text-gray-400 mt-2">May 28, 2026</p>
+        </a>
+      </div>
+    </div>
+
+  </article>
+
+  <!-- ========== RELATED DEVOTIONALS ========== -->
+  <div class="mt-12">
+    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Explore More</h2>
+    <a href="#" class="inline-flex items-center gap-2 text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 font-semibold transition">
+      <i class="fas fa-arrow-left"></i> Back to All Devotionals
+    </a>
+  </div>
+
+</div>
+
+<!-- ========== RESPONSIVE STYLES ========== -->
+<style>
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .prose {
+    color: inherit;
+  }
+
+  .prose p {
+    margin-bottom: 1rem;
+  }
+
+  .prose strong {
+    font-weight: 700;
+  }
+
+  /* Mobile optimizations */
+  @media (max-width: 640px) {
+    .prose {
+      font-size: 0.95rem;
+    }
+  }
+</style>
+{% endblock %}

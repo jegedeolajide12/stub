@@ -1,0 +1,248 @@
+{% extends "_base.html" %}
+{% load static %}
+
+{% block title %}Genesis 1:1 - Bible Reader - BibleAI{% endblock %}
+
+{% block content %}
+<div class="w-full px-4 sm:px-6 lg:px-8 mx-auto max-w-5xl py-8">
+  
+  <!-- ========== BREADCRUMB ========== -->
+  <nav class="mb-6 flex items-center gap-2 text-sm">
+    <a href="#" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 flex items-center gap-1">
+      <i class="fas fa-arrow-left text-xs"></i> Bible Reader
+    </a>
+    <span class="text-gray-400 dark:text-gray-600">/</span>
+    <a href="#" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700">Genesis</a>
+    <span class="text-gray-400 dark:text-gray-600">/</span>
+    <span class="text-gray-600 dark:text-gray-400">Verse 1</span>
+  </nav>
+
+  <!-- ========== VERSE HEADER ========== -->
+  <div class="bg-gradient-to-r from-indigo-50 to-blue-50 dark:from-indigo-950/50 dark:to-blue-950/50 rounded-2xl p-8 mb-8 border border-indigo-200 dark:border-indigo-800/50">
+    <div class="mb-4">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-2">Genesis 1:1</h1>
+      <p class="text-lg text-gray-600 dark:text-gray-400">Book of Genesis • Chapter 1 • Verse 1</p>
+    </div>
+  </div>
+
+  <!-- ========== MAIN CONTENT GRID ========== -->
+  <div class="grid lg:grid-cols-3 gap-8 mb-8">
+    
+    <!-- LEFT: VERSE CONTENT -->
+    <div class="lg:col-span-2">
+      
+      <!-- Translation Tabs -->
+      <div class="mb-6 flex items-center gap-2 border-b border-gray-200 dark:border-gray-700 overflow-x-auto">
+        <button class="px-4 py-3 border-b-2 border-indigo-600 text-indigo-600 dark:text-indigo-400 font-semibold whitespace-nowrap">NIV</button>
+        <button class="px-4 py-3 border-b-2 border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 font-semibold whitespace-nowrap">KJV</button>
+        <button class="px-4 py-3 border-b-2 border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 font-semibold whitespace-nowrap">ESV</button>
+        <button class="px-4 py-3 border-b-2 border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 font-semibold whitespace-nowrap">NKJV</button>
+      </div>
+
+      <!-- Verse Text - NIV -->
+      <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700 mb-8">
+        <p class="text-3xl font-serif italic leading-relaxed text-gray-900 dark:text-gray-100 mb-4">
+          "In the beginning God created the heavens and the earth."
+        </p>
+        <p class="text-sm text-gray-600 dark:text-gray-400">New International Version (NIV)</p>
+      </div>
+
+      <!-- Parallel Translations -->
+      <div class="bg-gray-50 dark:bg-gray-900/50 rounded-2xl p-6 border border-gray-200 dark:border-gray-700 mb-8">
+        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-4">Other Translations</h3>
+        <div class="space-y-4">
+          <div>
+            <p class="text-xs uppercase font-bold text-gray-600 dark:text-gray-400 mb-1">KJV (King James Version)</p>
+            <p class="text-base leading-relaxed text-gray-800 dark:text-gray-200">In the beginning God created the heaven and the earth.</p>
+          </div>
+          <div class="pt-4 border-t border-gray-200 dark:border-gray-700">
+            <p class="text-xs uppercase font-bold text-gray-600 dark:text-gray-400 mb-1">ESV (English Standard Version)</p>
+            <p class="text-base leading-relaxed text-gray-800 dark:text-gray-200">In the beginning, God created the heavens and the earth.</p>
+          </div>
+          <div class="pt-4 border-t border-gray-200 dark:border-gray-700">
+            <p class="text-xs uppercase font-bold text-gray-600 dark:text-gray-400 mb-1">NKJV (New King James Version)</p>
+            <p class="text-base leading-relaxed text-gray-800 dark:text-gray-200">In the beginning God created the heavens and the earth.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Commentary Section -->
+      <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700 mb-8">
+        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+          <i class="fas fa-book text-indigo-600 dark:text-indigo-400"></i> Commentary
+        </h3>
+        
+        <div class="space-y-6">
+          <div>
+            <h4 class="font-bold text-gray-900 dark:text-white mb-2">Overview</h4>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+              Genesis 1:1 is arguably one of the most significant verses in the Bible. It establishes the foundational truth upon which all biblical theology rests: God is the creator of all things. The opening phrase "In the beginning" situates this event at the origin of all existence. The word "created" (Hebrew: <em>bara</em>) is used exclusively in the Bible for acts of divine creation, emphasizing that what follows is an account of God's supernatural act, not the working of natural laws alone.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-gray-900 dark:text-white mb-2">Cultural Context</h4>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+              In the ancient Near Eastern world, creation accounts typically portrayed gods struggling against chaos or warring with other deities. Genesis presents a radically different picture: God creates through mere spoken word ("Let there be..."), establishing His absolute sovereignty and power. There is no conflict, no resistance—only the expression of divine will bringing order from formlessness.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-gray-900 dark:text-white mb-2">Theological Significance</h4>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+              This verse affirms:
+            </p>
+            <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 mt-2 space-y-1">
+              <li>God's existence prior to creation</li>
+              <li>God's omnipotence (all-powerfulness)</li>
+              <li>God's freedom in creation (He created by choice, not necessity)</li>
+              <li>The material world's reality and goodness (God created it, and later evaluated it as "good")</li>
+              <li>The distinction between Creator and creation</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-gray-900 dark:text-white mb-2">Practical Application</h4>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+              Understanding that God is the creator of all things transforms how we live. It means recognizing God's authority over every aspect of existence, finding security in His power, and understanding our purpose within His creation. It calls us to stewardship of the natural world and to worship of the Creator.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDEBAR: QUICK INFO & ACTIONS -->
+    <div>
+      
+      <!-- Verse Actions Card -->
+      <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700 mb-6 sticky top-8">
+        <h3 class="font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+          <i class="fas fa-star text-amber-500"></i> Actions
+        </h3>
+        <div class="space-y-3">
+          <button class="w-full px-4 py-2.5 rounded-xl bg-yellow-100 dark:bg-yellow-900/50 text-yellow-700 dark:text-yellow-300 hover:bg-yellow-200 dark:hover:bg-yellow-800/50 transition font-semibold flex items-center justify-center gap-2">
+            <i class="fas fa-highlighter"></i> Highlight
+          </button>
+          <button class="w-full px-4 py-2.5 rounded-xl bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-blue-800/50 transition font-semibold flex items-center justify-center gap-2">
+            <i class="fas fa-bookmark"></i> Bookmark
+          </button>
+          <button class="w-full px-4 py-2.5 rounded-xl bg-green-100 dark:bg-green-900/50 text-green-700 dark:text-green-300 hover:bg-green-200 dark:hover:bg-green-800/50 transition font-semibold flex items-center justify-center gap-2">
+            <i class="fas fa-sticky-note"></i> Add Note
+          </button>
+          <button class="w-full px-4 py-2.5 rounded-xl bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300 hover:bg-purple-200 dark:hover:bg-purple-800/50 transition font-semibold flex items-center justify-center gap-2">
+            <i class="fas fa-sparkles"></i> Ask AI
+          </button>
+          <button class="w-full px-4 py-2.5 rounded-xl bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 hover:bg-indigo-200 dark:hover:bg-indigo-800/50 transition font-semibold flex items-center justify-center gap-2">
+            <i class="fas fa-share-alt"></i> Share
+          </button>
+        </div>
+      </div>
+
+      <!-- Word Study -->
+      <div class="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-950/40 dark:to-pink-950/40 rounded-2xl p-6 border border-purple-200 dark:border-purple-800/50 mb-6">
+        <h3 class="font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+          <i class="fas fa-language text-purple-600 dark:text-purple-400"></i> Word Study
+        </h3>
+        <div class="space-y-3 text-sm">
+          <div>
+            <p class="font-semibold text-gray-900 dark:text-white">בָּרָא (Bara)</p>
+            <p class="text-gray-600 dark:text-gray-400">Hebrew • "To create, make"</p>
+            <p class="text-xs text-gray-600 dark:text-gray-400 mt-1">Used exclusively for God's creation acts in the OT. Emphasizes creation from nothing (ex nihilo).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cross References -->
+      <div class="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950/40 dark:to-emerald-950/40 rounded-2xl p-6 border border-green-200 dark:border-green-800/50 mb-6">
+        <h3 class="font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+          <i class="fas fa-link text-green-600 dark:text-green-400"></i> See Also
+        </h3>
+        <div class="space-y-2 text-sm">
+          <a href="#" class="block p-2 rounded-lg bg-white dark:bg-gray-800 hover:bg-green-100 dark:hover:bg-green-900/30 transition">
+            <p class="font-semibold text-green-700 dark:text-green-300">John 1:1-3</p>
+            <p class="text-xs text-gray-600 dark:text-gray-400">In the beginning was the Word</p>
+          </a>
+          <a href="#" class="block p-2 rounded-lg bg-white dark:bg-gray-800 hover:bg-green-100 dark:hover:bg-green-900/30 transition">
+            <p class="font-semibold text-green-700 dark:text-green-300">Colossians 1:16</p>
+            <p class="text-xs text-gray-600 dark:text-gray-400">All things were created by Him</p>
+          </a>
+          <a href="#" class="block p-2 rounded-lg bg-white dark:bg-gray-800 hover:bg-green-100 dark:hover:bg-green-900/30 transition">
+            <p class="font-semibold text-green-700 dark:text-green-300">Hebrews 11:3</p>
+            <p class="text-xs text-gray-600 dark:text-gray-400">By faith we understand creation</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Study Notes -->
+      <div class="bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/40 dark:to-orange-950/40 rounded-2xl p-6 border border-amber-200 dark:border-amber-800/50">
+        <h3 class="font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+          <i class="fas fa-lightbulb text-amber-600 dark:text-amber-400"></i> Study Tips
+        </h3>
+        <ul class="text-sm text-gray-700 dark:text-gray-300 space-y-2">
+          <li class="flex gap-2">
+            <span class="text-amber-600 dark:text-amber-400">•</span>
+            <span>Notice the order: heavens first, then earth (spirit before matter)</span>
+          </li>
+          <li class="flex gap-2">
+            <span class="text-amber-600 dark:text-amber-400">•</span>
+            <span>Compare with other creation accounts in ancient literature</span>
+          </li>
+          <li class="flex gap-2">
+            <span class="text-amber-600 dark:text-amber-400">•</span>
+            <span>Reflect on what "image of God" means (Gen 1:27)</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========== RELATED VERSES ========== -->
+  <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
+    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
+      <i class="fas fa-book-bookmark text-indigo-600 dark:text-indigo-400"></i> Related Passages
+    </h3>
+    
+    <div class="grid md:grid-cols-2 gap-6">
+      <!-- Genesis 1:2-3 -->
+      <a href="#" class="p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-indigo-500 dark:hover:border-indigo-600 hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition">
+        <p class="font-semibold text-gray-900 dark:text-white mb-2">Genesis 1:2-3</p>
+        <p class="text-sm text-gray-700 dark:text-gray-300 line-clamp-2">"Now the earth was formless and empty, darkness was over the surface of the deep..."</p>
+        <p class="text-xs text-gray-500 dark:text-gray-400 mt-2">Continuation of creation account</p>
+      </a>
+
+      <!-- John 1:1-3 -->
+      <a href="#" class="p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-indigo-500 dark:hover:border-indigo-600 hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition">
+        <p class="font-semibold text-gray-900 dark:text-white mb-2">John 1:1-3</p>
+        <p class="text-sm text-gray-700 dark:text-gray-300 line-clamp-2">"In the beginning was the Word, and the Word was with God..."</p>
+        <p class="text-xs text-gray-500 dark:text-gray-400 mt-2">New Testament perspective on creation</p>
+      </a>
+
+      <!-- Colossians 1:16-17 -->
+      <a href="#" class="p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-indigo-500 dark:hover:border-indigo-600 hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition">
+        <p class="font-semibold text-gray-900 dark:text-white mb-2">Colossians 1:16-17</p>
+        <p class="text-sm text-gray-700 dark:text-gray-300 line-clamp-2">"For in him all things were created: things in heaven and on earth..."</p>
+        <p class="text-xs text-gray-500 dark:text-gray-400 mt-2">Christ's role in creation</p>
+      </a>
+
+      <!-- Hebrews 1:1-3 -->
+      <a href="#" class="p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-indigo-500 dark:hover:border-indigo-600 hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition">
+        <p class="font-semibold text-gray-900 dark:text-white mb-2">Hebrews 1:1-3</p>
+        <p class="text-sm text-gray-700 dark:text-gray-300 line-clamp-2">"The Son is the radiance of God's glory and the exact representation of his being..."</p>
+        <p class="text-xs text-gray-500 dark:text-gray-400 mt-2">Creation through the Son</p>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<style>
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>
+{% endblock %}
